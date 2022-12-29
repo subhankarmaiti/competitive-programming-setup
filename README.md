@@ -5,9 +5,9 @@
 
 ```
 sudo apt-get update
-sudo apt-get install build-essential\Open sublime text and do the following steps.
+sudo apt-get install build-essential
 ```
-
+Open sublime text and do the following steps.
 3. goto tools > build system > new build system and paste below code and save as c++14.sublime-build
 
 ``` sublime_build
@@ -31,47 +31,50 @@ sudo apt-get install build-essential\Open sublime text and do the following step
 4. tools > command pallet > search for package controller : install package and add it to sublime.
 5. search and install the package sublimeAStyleFormatter (optional)
 6. Go to preferences > browse packages > sublimeAStyleFormatter > SublimeAStyleFormatter.sublime-settings and change "autoformat\_on\_save":true (optional)
+    for mac with m1 
+    Quit Sublime text.
+    Go to Applications.
+    Right click on Sublime Text -> Get Info -> Select "Open using Rosetta" checkbox.
+    Open sublime Text again and check.
 7. create a direactory /opt/cp and create "template" inside cp directory. (for windows do in C://cp)
 8. create 3 files main.cpp input.txt and outpot.txt inside template directory and copy your template inside main.cpp
 
 <br>
 ```
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-struct hash\_pair {
-template \<class T1, class T2>
-size\_t operator()(const pair\<T1, T2>& p) const
-{
-auto hash1 = hash{}(p.first);
 
-auto hash2 = hash{}(p.second);
+struct hash_pair {
+	template <class T1, class T2>
+	size_t operator()(const pair\<T1, T2>& p) const
+	{
+		auto hash1 = hash{}(p.first);
 
-return hash1 ^ hash2;
-}
+		auto hash2 = hash{}(p.second);
+
+		return hash1 ^ hash2;
+	}
 };
 
-void solve()
-{
+
+void   solve() {
+	cout << "Hello";
 }
 
-int main()
-{
+int main() {
 
-#ifndef ONLINE\_JUDGE
-freopen("input.txt", "r", stdin);
-freopen("output.txt", "w", stdout);
+#ifndef
+	ONLINE_JUDGE freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
 #endif
 
-
-int t;
-cin >> t;
-while (t--)
-{
-    solve();
-}
-return 0;
-
+	int t;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+	return 0;
 
 }
 ```
